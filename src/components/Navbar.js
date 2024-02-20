@@ -1,18 +1,22 @@
 "use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleOpenMenu = () => {
         const btn = document.getElementById('menu-btn')
         const nav = document.getElementById('menu')
         // btn.classList.toggle("open")
         nav.classList.toggle("flex")
         nav.classList.toggle("hidden")
+        setIsMenuOpen(!isMenuOpen);
+
       }
   return (
     <nav>
-        <div className='xl:container border-b-2  border-blue-700 md:border-none relative px-5 md:mx-auto md:px-12 py-5'>
+        <div className ={` xl:container ${isMenuOpen ? '' : 'border-blue-700 border-b-2'}  md:border-none relative px-5 md:mx-auto md:px-12 py-5 `}>
             <div className='flex justify-between items-center'>
                 <div>
                     <Link href="/">
@@ -38,7 +42,7 @@ const Navbar = () => {
             </div>
 
             <div className="md:hidden">
-                <div id="menu" className="hidden transition-all duration-500   flex-col items-center py-8 space-y-6 font-bold   ">
+                <div id="menu" className="hidden absolute left-6  right-6 bg-black z-10   flex-col items-center pb-48 space-y-10 pt-4 font-bold   ">
                     <Link onClick={handleOpenMenu}  href="/">about us</Link>
                     <Link onClick={handleOpenMenu}   href="/">our work</Link>
                     <Link onClick={handleOpenMenu}  href="/">our clients</Link>
