@@ -8,7 +8,7 @@ const Navbar = () => {
     const handleOpenMenu = () => {
         const btn = document.getElementById('menu-btn')
         const nav = document.getElementById('menu')
-        // btn.classList.toggle("open")
+        btn.classList.toggle("open")
         nav.classList.toggle("flex")
         nav.classList.toggle("hidden")
         setIsMenuOpen(!isMenuOpen);
@@ -35,10 +35,8 @@ const Navbar = () => {
                 <button onClick={handleOpenMenu} id="menu-btn" className="block hamburger  md:hidden focus:outline-none">
                     <span  className="hamburger-top"></span>
                     <span className="hamburger-middle"></span>
-                 </button>
-
-
-
+                    <span className="hamburger-bottom"></span>
+                </button>
             </div>
 
             <div className="md:hidden">
