@@ -9,8 +9,8 @@ const Footer = () => {
             <div className='flex justify-between  flex-wrap gap-10  '>
                 <div className='flex gap-x-32'>
                     <div>
-                        <h3 className='text-2xl font-light'>sitemap</h3>
-                        <div className='flex flex-col space-y-1 mt-4'>
+                        <h3 className='text-2xl text-center font-light'>sitemap</h3>
+                        <div className='flex items-center flex-col space-y-1 mt-4'>
                             <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-1 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>about us</Link>
                             <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-1 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
                             <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-1 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
@@ -19,8 +19,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <div>
-                        <h3 className='text-2xl font-light'>offices</h3>
-                        <div className='flex flex-col space-y-1 mt-4'>
+                        <h3 className='text-2xl text-center font-light'>offices</h3>
+                        <div className='flex items-center flex-col space-y-1 mt-4'>
                             <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-1 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>dubai,UAE</Link>
                             <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-1 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>beirut,Lebanon</Link>
                             <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-1 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>beirut,Lebanon</Link>

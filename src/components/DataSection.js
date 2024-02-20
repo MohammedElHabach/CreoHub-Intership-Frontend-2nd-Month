@@ -26,7 +26,7 @@ const DataSection = () => {
   return (
     <section id='data section'>
         <div className='xl:container mx-auto mt-20 px-12'>
-            <div className='grid grid-cols-1 sm:grid-cols-2 place-items-center gap-y-7 '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 place-items-center gap-7 '>
                 {Data.map((elt,index) => (
                     <Card key={index} img={elt.img} title={elt.title} desc={elt.description}/>
                 ))}
