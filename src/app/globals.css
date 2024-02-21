@@ -50,3 +50,19 @@ body{
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
+
+.swiper-button-next{
+  margin-right: 35.5rem !important;
+  background-color: rgb(119, 186, 119) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 2.2rem !important;
+}
+
+.swiper-button-prev{
+  margin-left: 35.5rem !important;
+  background-color: rgb(119, 186, 119) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  padding: 2.2rem !important;
+}
