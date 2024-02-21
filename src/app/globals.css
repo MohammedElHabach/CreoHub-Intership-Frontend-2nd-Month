@@ -56,7 +56,12 @@ body{
   background-color: rgb(119, 186, 119) !important;
   color: white !important;
   border-radius: 50% !important;
-  padding: 2.2rem !important;
+  padding: 1.3rem !important;
+}
+
+.swiper-button-next::after , .swiper-button-prev::after{
+  font-size: 20px !important;
+
 }
 
 .swiper-button-prev{
@@ -64,5 +69,5 @@ body{
   background-color: rgb(119, 186, 119) !important;
   color: white !important;
   border-radius: 50% !important;
-  padding: 2.2rem !important;
+  padding: 1.5rem !important;
 }

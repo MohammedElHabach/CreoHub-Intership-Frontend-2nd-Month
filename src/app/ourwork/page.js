@@ -30,10 +30,7 @@ const page = async () => {
 
   const slidesPerView=1
     const breakPointsForCategories = {
-        375:{
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
+        
         640: {
           slidesPerView: 3,
           spaceBetween: 30,
