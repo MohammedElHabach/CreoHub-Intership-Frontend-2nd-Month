@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className='bg-pink '>
         <div className='xl:container mx-auto mt-16 px-12 py-14'>
             <div className='flex justify-between  flex-wrap gap-10  '>
-                <div className='flex gap-x-32'>
+                <div className='flex gap-x-20 md:gap-x-32'>
                     <div>
                         <h3 className='text-2xl text-center font-light'>sitemap</h3>
                         <div className='flex items-center flex-col space-y-1 mt-4'>
