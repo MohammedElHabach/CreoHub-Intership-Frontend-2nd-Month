@@ -16,7 +16,7 @@ import CardSwiper from "./CardSwiper";
 import { SwiperSlide } from 'swiper/react';
 
 
-const MySwiper = ({breakpoints,slidesPerView,projects,}) => {
+const MySwiper = ({projects}) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const handleSlideChange = (swiper) => {
     setActiveSlideIndex(swiper.activeIndex);
