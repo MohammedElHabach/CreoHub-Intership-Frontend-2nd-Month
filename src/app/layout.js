@@ -12,7 +12,6 @@ const getMetaData = async () => {
         "Accept-Language": "en", 
       },
     });
-    console.log(response.data);
     return response.data;
   } catch (err) {
     console.error(err);
