@@ -47,6 +47,7 @@ const page = async () => {
 
       const handleSlideChange = (swiper) => {
         setActiveSlideIndex(swiper.activeIndex);
+        console.log("on slide change",activeSlideIndex);
       };
 
 
@@ -57,10 +58,10 @@ const page = async () => {
             <h2 className='text-3xl font-bold text-center'>Our Work</h2>
 
             <div className=' pt-5 px-5  container mx-auto'>  
-                    <MySwiper slidesPerView={slidesPerView} breakpoints={breakPointsForCategories} onSlideChange={handleSlideChange}>
+                    <MySwiper slidesPerView={slidesPerView} breakpoints={breakPointsForCategories} onSlideChange={handleSlideChange} >
                     {projects.data.map((elt,index) => (
                         <SwiperSlide key={elt.id}>
-                            <CardSwiper key={elt.id} img={elt.image}  title={elt.title} desc={elt.text} style={{opacity: activeSlideIndex === index ? "1" : "0.2"}} />
+                            <CardSwiper key={elt.id} img={elt.image}  title={elt.title} desc={elt.text} isActive={index === activeSlideIndex}  />
                         </SwiperSlide>
                         ))}
                     </MySwiper>

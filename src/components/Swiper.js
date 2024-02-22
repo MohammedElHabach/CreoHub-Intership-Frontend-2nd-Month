@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-const MySwiper = ({ children,breakpoints,slidesPerView }) => {
+const MySwiper = ({ children,breakpoints,slidesPerView,onSlideChange }) => {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y,]}
@@ -18,7 +18,8 @@ const MySwiper = ({ children,breakpoints,slidesPerView }) => {
       slidesPerView={slidesPerView}
       breakpoints={breakpoints}
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={onSlideChange}
+      centeredSlides
     >
       {children} 
     </Swiper>

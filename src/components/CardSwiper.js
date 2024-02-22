@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import React from 'react'
 
-const CardSwiper = ({img,title,desc}) => {
+const CardSwiper = ({img,title,desc,isActive}) => {
   return (
-    <div className="space-y-3 ">
+    <div className={`space-y-3  ${isActive ? ' opacity-100':' opacity-50'}` }>
       <img className="min-h-[350px] object-cover" src={img} alt="image" />
       <h2 className="text-2xl">{title}</h2>
       <p className=''>{desc}</p>
