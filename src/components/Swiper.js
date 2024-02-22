@@ -18,15 +18,16 @@ import { SwiperSlide } from 'swiper/react';
 
 const MySwiper = ({projects}) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
   const handleSlideChange = (swiper) => {
-    setActiveSlideIndex(swiper.activeIndex);
-    console.log("on slide change",activeSlideIndex);
+    setActiveSlideIndex(swiper.realIndex);
+    console.log("on slide change",swiper.realIndex);
   };
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={40}
-      //   loop={false}
+      loop
       scrollbar
       navigation
       slidesPerView={1}
@@ -34,7 +35,7 @@ const MySwiper = ({projects}) => {
         
         640: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 40,
         },
         768: {
           slidesPerView: 4,

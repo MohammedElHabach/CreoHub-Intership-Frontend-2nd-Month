@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "../../components/Navbar"
 import MySwiper from '../../components/Swiper';
 import axios from '@/utils/axios';
@@ -32,6 +33,7 @@ const page = async () => {
                  <MySwiper projects={projects.data} ></MySwiper>  
             </div>
         </div>
+        <Footer/>
     </>
   )
 }
