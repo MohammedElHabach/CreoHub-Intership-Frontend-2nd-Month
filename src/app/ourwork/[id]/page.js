@@ -1,6 +1,9 @@
+"use client"
 import Footer from '@/components/Footer';
+
 import Navbar from '@/components/Navbar';
 import axios from '@/utils/axios';
+import { useRouter } from 'next/navigation';
 import React from 'react'
 
 const getProjects = async () => {
@@ -17,8 +20,46 @@ const getProjects = async () => {
   };
 
 const ProjectDetails = async (params) => {
+    const router = useRouter();
     const projects= await getProjects()
     const projectDetail = projects.data.filter((elt) =>  elt.id == params.params.id)
+
+    const arrayOfIds = projects.data.map(project => project.id);
+    // console.log(arrayOfIds);
+
+
+
+    const handleNextProject = () => {
+        const currentIndex = arrayOfIds.indexOf(projectDetail[0].id);
+        if (currentIndex !== -1) {
+            // Calculate the next index (circular, so it wraps around)
+            const nextIndex = (currentIndex + 1) % arrayOfIds.length;
+          
+            // Get the next ID
+            const nextId = arrayOfIds[nextIndex];
+          
+            console.log("nextId",nextId);
+            router.push((`/ourwork/${nextId}`))
+          } else {
+            console.error("Current ID not found in the array");
+          }
+    }
+
+    const handlePrevProject = () => {
+        const currentIndex = arrayOfIds.indexOf(projectDetail[0].id);
+        if (currentIndex !== -1) {
+            // Calculate the prev index (circular, so it wraps around)
+            const prevIndex = (currentIndex - 1 + arrayOfIds.length) % arrayOfIds.length;
+          
+            // Get the previous ID
+            const prevId = arrayOfIds[prevIndex];
+          
+            console.log("prevId",prevId);
+            router.push((`/ourwork/${prevId}`))
+          } else {
+            console.error("Current ID not found in the array");
+          }
+    }
     
 
   return (
@@ -45,6 +86,11 @@ const ProjectDetails = async (params) => {
                     <p className=' border-b py-3'>AGENCY : {projectDetail[0].agency} </p>
                 </div>
             </div>
+        <div className='mt-10 space-x-4 flex justify-end'>
+            <button onClick={handlePrevProject}>Previous Project</button>
+            <button onClick={handleNextProject}>Next Project</button>
+        </div>
+
         </div>
     </section>
     <Footer/>
