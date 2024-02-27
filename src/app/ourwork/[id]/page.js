@@ -22,7 +22,7 @@ const ProjectDetails = async (params) => {
   return (
     <section id='project-detail' >
         <div className='xl:container mx-auto  px-12'>
-            <div className='flex justify-center '>
+            <div className=' '>
                  <img src={projectDetail[0].image} alt="project detail photo" />
             </div>
 
