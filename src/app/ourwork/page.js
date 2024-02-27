@@ -22,7 +22,8 @@ const page = async () => {
 
 
   const projects= await getProjects()
-
+  // console.log("projects",projects); 
+ 
   return ( 
     <>
         <Navbar/>
