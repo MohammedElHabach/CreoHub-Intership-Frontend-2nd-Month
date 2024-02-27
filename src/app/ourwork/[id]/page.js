@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
 import axios from '@/utils/axios';
 import React from 'react'
 
@@ -20,17 +22,21 @@ const ProjectDetails = async (params) => {
     
 
   return (
+    <>
+    <Navbar/>
     <section id='project-detail' >
-        <div className='xl:container mx-auto  px-12'>
+        <div className='xl:container mx-auto  px-12 mt-10'>
             <div className=' '>
                  <img src={projectDetail[0].image} alt="project detail photo" />
             </div>
 
-            <div className=' flex flex-col mt-20 md:grid md:grid-cols-2 md:gap-x-10  '>
+            <div className=' mt-10 sm:grid sm:grid-cols-2 sm:gap-x-10  '>
+            {projectDetail[0].text && 
                 <div>
                     <h2 className='text-2xl '>Description</h2>
                     <p className='pt-4 text-justify'>{projectDetail[0].text}</p>
                 </div>
+            }
 
                 <div className='mt-10'>
                     <p className=' border-b py-3'>CLIENT : {projectDetail[0].client}</p>
@@ -41,6 +47,8 @@ const ProjectDetails = async (params) => {
             </div>
         </div>
     </section>
+    <Footer/>
+    </>
   )
 }
 
