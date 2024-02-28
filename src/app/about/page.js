@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "../../components/Navbar";
 import AboutSection from "@/components/AboutSection";
 const about = () => {
@@ -16,6 +17,7 @@ const about = () => {
         text={"We Foster \n Innovation , Unleash Your Legacy"}
         span={`\nFor Future Generations`}
       />
+      <Footer/>
     </>
   );
 };
