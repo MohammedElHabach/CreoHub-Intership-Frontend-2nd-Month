@@ -22,12 +22,12 @@ const Navbar = () => {
                     <Link href="/">
                         <img className='w-16 md:w-28' src="/logo.png" alt="logo" />
                     </Link>
-                </div>
+                </div>  
 
                 <div className='hidden md:flex space-x-4'>
                     <Link href="/about" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>about us</Link>
                     <Link href="/ourwork" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
-                    <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
+                    <Link href="/ourclients" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
                     <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our team</Link>
                     <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
                 </div>
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div id="menu" className="hidden absolute w-full left-0 bg-black z-10   flex-col items-center pb-48 space-y-10 pt-4 font-bold   ">
                     <Link onClick={handleOpenMenu}  href="/about">about us</Link>
                     <Link onClick={handleOpenMenu}   href="/ourwork">our work</Link>
-                    <Link onClick={handleOpenMenu}  href="/">our clients</Link>
+                    <Link onClick={handleOpenMenu}  href="/ourclients">our clients</Link>
                     <Link onClick={handleOpenMenu} href="/">our team</Link>
                     <Link onClick={handleOpenMenu} href="/">contact us</Link>
                 </div>
