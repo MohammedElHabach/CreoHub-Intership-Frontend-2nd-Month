@@ -38,11 +38,23 @@ const ourClients = () => {
     }
   };
 
-  const titleContent = [
-    "Consolidated Reporting",
-    "Estate Planning & Structuring",
-    "Real Estate Solutions",
-    "Private Office",
+  const content = [
+    {
+      title:"Consolidated Reporting",
+      text:"Lorem ipsum dolor sit amet consectetur adipisicing elit.Officia et totam libero ducimus magni? Ipsam similique est,quo labore vel recusandae blanditiis necessitatibus, quameligendi, rem eum dolor quidem vero!"
+    },
+    {
+      title:"Estate Planning & Structuring",
+      text:"The curious cat chased colorful butterflies through the enchanting garden, creating a whimsical dance of flutterin wings and furry paws. Meanwhile, a wise owl observed from the ancient branches, sharing ancient tales with the rustling leaves."
+    },
+    {
+      title:"Real Estate Solutions",
+      text:" In a distant land, adventurous explorers embarked on a journey to discover hidden treasures and unlock the mysteries of a forgotten civilization."
+    },
+    {
+      title:"Private Office",
+      text:"The sun dipped below the horizon, painting the sky in hues of orange and pink, bidding farewell to another day filled with tales untold."
+    }
   ];
   return (
     <>
@@ -51,14 +63,14 @@ const ourClients = () => {
         <div className="xl:container mx-auto px-12 mt-20">
           <div className="md:grid md:grid-cols-2 md:gap-x-10 ">
             <div className="mt-10">
-              {titleContent.map((content, index) => (
+              {content.map((elt, index) => (
                 <p
                   key={index}
                   className={`${
-                    activeSlideIndex === index ? "font-bold" : ""
-                  } uppercase text-xl border-b py-3`}
+                    activeSlideIndex === index ? "font-bold " : "mr-16"
+                  } uppercase text-xl border-b  py-3`}
                 >
-                  {content}
+                  {elt.title}
                 </p>
               ))}
 
@@ -87,40 +99,13 @@ const ourClients = () => {
                 onSlideChange={handleSlideChange}
                 centeredSlides
               >
-                <SwiperSlide>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Officia et totam libero ducimus magni? Ipsam similique est,
-                    quo labore vel recusandae blanditiis necessitatibus, quam
-                    eligendi, rem eum dolor quidem vero!
-                  </p>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <p>
-                    The curious cat chased colorful butterflies through the
-                    enchanting garden, creating a whimsical dance of fluttering
-                    wings and furry paws. Meanwhile, a wise owl observed from
-                    the ancient branches, sharing ancient tales with the
-                    rustling leaves.
-                  </p>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <p>
-                    In a distant land, adventurous explorers embarked on a
-                    journey to discover hidden treasures and unlock the
-                    mysteries of a forgotten civilization.
-                  </p>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <p>
-                    The sun dipped below the horizon, painting the sky in hues
-                    of orange and pink, bidding farewell to another day filled
-                    with tales untold.
-                  </p>
-                </SwiperSlide>
+                {content.map((elt,index) => (
+                  <SwiperSlide key={index}>
+                    <p key={index} >
+                      {elt.text}
+                    </p>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>
