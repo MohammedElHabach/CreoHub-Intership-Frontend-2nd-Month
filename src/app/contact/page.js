@@ -9,7 +9,7 @@ const page = () => {
         <div className='xl:container mx-auto px-12 mt-10'>
             <div className='text-center '>
                 <h1 className='text-3xl font-bold  decoration-pink underline-offset-[20px]	 underline'>Contact Us</h1> 
-                <form className='space-y-10 text-black mt-10'>
+                <form className='space-y-10  mt-10'>
                     <input placeholder='Name' className='p-3 mx-auto block bg-slate-800 rounded-md outline-none' type="text" />
                     <input placeholder='Email' type="email" className='p-3  mx-auto block bg-slate-800 rounded-md outline-none' />
                     <textarea placeholder='Message' cols="23" className='p-3 mx-auto block bg-slate-800 rounded-md outline-none' rows="4"></textarea>
