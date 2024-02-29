@@ -8,7 +8,7 @@ const page = () => {
     <section id='contact'>
         <div className='xl:container mx-auto px-12 mt-10'>
             <div className='text-center '>
-                <h1 className='text-3xl font-bold border-b-2 border-pink pb-3 mx-[70px] sm:mx-[190px] md:mx-[250px] lg:mx-[380px] xl:mx-[500px] 2xl:mx-[620px]'>Contact Us</h1> 
+                <h1 className='text-3xl font-bold  decoration-pink underline-offset-[20px]	 underline'>Contact Us</h1> 
                 <form className='space-y-10 text-black mt-10'>
                     <input placeholder='Name' className='p-3 mx-auto block bg-slate-800 rounded-md outline-none' type="text" />
                     <input placeholder='Email' type="email" className='p-3  mx-auto block bg-slate-800 rounded-md outline-none' />
