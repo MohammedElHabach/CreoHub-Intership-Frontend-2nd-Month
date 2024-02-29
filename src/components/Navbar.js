@@ -29,7 +29,7 @@ const Navbar = () => {
                     <Link href="/ourwork" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
                     <Link href="/ourclients" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
                     <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our team</Link>
-                    <Link href="/" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
+                    <Link href="/contact" className='relative  after:content-[""] after:absolute after:bg-blue-700 after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
                 </div>
 
                 <button onClick={handleOpenMenu} id="menu-btn" className="block hamburger  md:hidden focus:outline-none">
@@ -45,7 +45,7 @@ const Navbar = () => {
                     <Link onClick={handleOpenMenu}   href="/ourwork">our work</Link>
                     <Link onClick={handleOpenMenu}  href="/ourclients">our clients</Link>
                     <Link onClick={handleOpenMenu} href="/">our team</Link>
-                    <Link onClick={handleOpenMenu} href="/">contact us</Link>
+                    <Link onClick={handleOpenMenu} href="/contact">contact us</Link>
                 </div>
             </div>
 
