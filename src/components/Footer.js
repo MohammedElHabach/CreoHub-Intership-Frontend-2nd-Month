@@ -38,15 +38,14 @@ const Footer = () => {
             </div>
 
             <div className='flex flex-wrap justify-between items-center gap-y-7 mt-10'>
-                <div className='flex gap-x-7 items-center space-x-3'>
+                <div className='flex sm:gap-x-7 items-center space-x-3'>
                     <Link href="/">
                         <h1 className='text-3xl font-bold'>mindspace</h1>
                     </Link>
                     <span className='hidden md:block'>|</span>
-                    <div className='space-x-4'>
-
-                    <Link href="/"><InstagramIcon sx={{fontSize:"2rem"}}/></Link>
-                    <Link href="/"><LinkedInIcon sx={{fontSize:"2rem"}}/></Link>
+                    <div className='space-x-1 sm:space-x-3'>
+                        <Link href="/"><InstagramIcon sx={{fontSize:"2rem"}}/></Link>
+                        <Link href="/"><LinkedInIcon sx={{fontSize:"2rem"}}/></Link>
                     </div>
                 </div>
 
