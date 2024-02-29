@@ -17,6 +17,7 @@ import Navbar from "../../components/Navbar";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Footer from "@/components/Footer";
+import OurClientImage from "../../components/OurClientImage";
 const ourClients = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const swiperRef = useRef(null);
@@ -109,6 +110,7 @@ const ourClients = () => {
               </Swiper>
             </div>
           </div>
+          <OurClientImage/>
         </div>
       </section>
       <Footer />
