@@ -67,8 +67,8 @@ const ourClients = () => {
                 <p
                   key={index}
                   className={`${
-                    activeSlideIndex === index ? "font-bold " : "mr-16"
-                  } uppercase text-xl border-b  py-3`}
+                    activeSlideIndex === index ? "font-bold " : "mr-7 sm:mr-16"
+                  } uppercase text-sm sm:text-xl border-b  py-3`}
                 >
                   {elt.title}
                 </p>
