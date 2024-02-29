@@ -28,6 +28,7 @@ const MySwiper = ({ projects }) => {
     console.log("on slide change", swiper.realIndex);
   };
   return (
+    <div className="ourwork">
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={40}
@@ -67,6 +68,7 @@ const MySwiper = ({ projects }) => {
         </SwiperSlide>
       ))}
     </Swiper>
+    </div>
   );
 };
 
