@@ -114,3 +114,9 @@ body {
     left: 38% !important;
   }
 }
+
+@media screen and (min-width: 528px) and (max-width: 639px) {
+  .teamInfo {
+    padding-left: 30%;
+  }
+}
