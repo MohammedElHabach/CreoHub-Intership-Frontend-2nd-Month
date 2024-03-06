@@ -10,12 +10,15 @@ const about = () => {
         img={"/office.avif"}
         text={"We Foster \n Innovation , Safeguarding Your Legacy"}
         span={`\nFor Future Generations`}
+        sectionId="firstSec"
       />
       <AboutSection
         leftPos={"left-40"}
         img={"/office2.avif"}
         text={"We Foster \n Innovation , Unleash Your Legacy"}
         span={`\nFor Future Generations`}
+        sectionId="secondSec"
+
       />
       <Footer/>
     </>
