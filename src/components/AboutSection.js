@@ -9,7 +9,7 @@ const AboutSection = ({text,span,img,rightPos,leftPos,sectionId}) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const tl = gsap.timeline();
-    const tl2 = gsap.timeline();
+    const tl2 = gsap.timeline().paused(true);
 
 
     tl.fromTo("#about .firstSecImg", { opacity: 0 ,x:-1000}, { opacity: 1, duration: 0.9,x:0, ease: Power3.easeOut })
@@ -23,17 +23,10 @@ const AboutSection = ({text,span,img,rightPos,leftPos,sectionId}) => {
         start: 'top center', 
         onEnter: () => tl2.play(),
         onLeaveBack: () => tl2.reverse(),
-        onEnterBack: () => tl2.reverse(),
-      });
-  
-      ScrollTrigger.create({
-        trigger: "#about .secondSecH1",
-        start: 'top center', 
-        onEnter: () => tl2.play(),
-        onLeaveBack: () => tl2.reverse(),
-        onEnterBack: () => tl2.reverse(),
+        onEnterBack:() => tl2.play()
       });
   }, []);
+
   return (
     <section id='about'>
         <div className='xl:container mx-auto  px-12 mt-10 '>
