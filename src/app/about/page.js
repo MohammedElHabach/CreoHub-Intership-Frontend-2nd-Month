@@ -12,6 +12,8 @@ const about = () => {
         span={`\nFor Future Generations`}
         sectionId="firstSec"
       />
+      <div className="h-[100vh] mt-72">
+
       <AboutSection
         leftPos={"left-40"}
         img={"/office2.avif"}
@@ -20,6 +22,7 @@ const about = () => {
         sectionId="secondSec"
 
       />
+      </div>
       <Footer/>
     </>
   );
