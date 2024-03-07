@@ -1,5 +1,5 @@
 "use client"
-import gsap from "gsap";
+import gsap, { Power3 } from "gsap";
 import React, { useEffect, useRef } from "react";
 
 const CustomCursor = () => {
@@ -9,11 +9,14 @@ const CustomCursor = () => {
   const moveCursor = (e) => {
     gsap.to(cursorRef.current,{
         x:e.clientX,
-        y:e.clientY
+        y:e.clientY,
+        ease:Power3.easeOut
     })
     gsap.to(followerRef.current,{
         x:e.clientX,
-        y:e.clientY
+        y:e.clientY,
+        ease:Power3.easeOut
+
     })
 
   }
