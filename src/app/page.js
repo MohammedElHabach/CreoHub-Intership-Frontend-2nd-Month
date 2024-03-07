@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import DataSection from "@/components/DataSection";
 import Footer from "@/components/Footer";
 import axios from "@/utils/axios";
-
+import CustomCursor from "@/components/CustomCursor"
 export default async function Home() {
   
   const data = await getData()
@@ -12,6 +12,7 @@ export default async function Home() {
   
     return (
     <>
+    <CustomCursor/>
       <Navbar />
       <HeroSection/>
       <DataSection data={data.props.data.data.sections}/>

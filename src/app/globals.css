@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   background-color: black;
   color: white;
@@ -119,4 +120,24 @@ body {
   .teamInfo {
     padding-left: 20%;
   }
+}
+
+.cursor{
+  width: 90px;
+  height: 90px;
+  position: fixed;
+  background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.follower-cursor{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: fixed;
+  color: white;
+  z-index: 9999;
+  border-radius: 50%;
 }
