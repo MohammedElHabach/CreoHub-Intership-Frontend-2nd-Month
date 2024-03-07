@@ -8,7 +8,7 @@ const useAnimation = (elementClass) => {
         gsap.registerPlugin(ScrollTrigger);
         const tl = gsap.timeline().paused(true);
     
-        tl.fromTo(`.${elementClass}`, { opacity: 0 }, { opacity: 1, duration: 0.9, y: -40, ease: Power3.easeOut });
+        tl.fromTo(`.${elementClass}`, { opacity: 0,y:40 }, { opacity: 1, duration: 0.9, y: 0, ease: Power3.easeOut });
     
         ScrollTrigger.create({
           trigger: `.${elementClass}`,

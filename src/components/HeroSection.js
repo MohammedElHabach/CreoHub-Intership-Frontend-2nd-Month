@@ -6,8 +6,8 @@ const HeroSection = () => {
   useEffect(() => {
     const tl = gsap.timeline();
 
-    tl.fromTo("#hero img", { opacity: 0 }, { opacity: 1, duration: 0.9, y: -40, ease: Power3.easeOut })
-      .fromTo("#hero h1", { opacity: 0}, { opacity: 1, duration: 0.9, y: -40, ease: Power3.easeOut } ,.6);
+    tl.fromTo("#hero img", { opacity: 0 ,y: 40}, { opacity: 1, duration: 0.9, y: 0, ease: Power3.easeOut })
+      .fromTo("#hero h1", { opacity: 0,y: 40}, { opacity: 1, duration: 0.9, y: 0, ease: Power3.easeOut } ,.6);
 
   }, []);
 

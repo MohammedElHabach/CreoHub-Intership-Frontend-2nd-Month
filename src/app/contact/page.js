@@ -4,22 +4,10 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { ScrollTrigger } from 'gsap/all';
 import gsap, { Power3 } from "gsap";
+import useAnimation from "@/components/useAnimation";
 const page = () => {
   
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const tl = gsap.timeline();
-
-    tl.fromTo(".contactusElement", { opacity: 0 }, { opacity: 1, duration: 0.9, y: -40, ease: Power3.easeOut })
-
-    ScrollTrigger.create({
-      trigger: ".contactusElement",
-      start: 'top center', 
-      onEnter: () => tl.play(),
-      onLeaveBack: () => tl.reverse(),
-      onEnterBack:() => tl.play()
-    });
-  }, []);
+  useAnimation('contactus')
 
 
   const [formData, setFormData] = useState({
@@ -77,7 +65,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <section id="contact">
+      <section id="contact" className="contactus">
         <div className="xl:container mx-auto px-12 mt-10">
           <div className="text-center ">
             <h1 className='contactusElement text-3xl font-bold relative after:content-[""] after:absolute after:bg-pink after:h-0.5 after:-bottom-3 after:w-20 after:left-[38%] sm:after:left-[44%] md:after:left-[45%] lg:after:left-[46%] xl:after:left-[47.5%]'>
