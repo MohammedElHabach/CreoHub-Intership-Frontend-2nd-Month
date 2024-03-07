@@ -9,10 +9,10 @@ const ourTeam = () => {
   return (
     <>
       <Navbar />
-      <section className="mb-32 contactusElement">
+      <section className="mb-32 ">
         <div className="xl:container mx-auto px-12 mt-10">
           <div className="grid grid-cols-1 gap-x-10 gap-y-32 lg:gap-y-40  sm:grid-cols-4">
-                <div className="relative flex flex-col items-center">
+                <div className="relative flex flex-col items-center contactusElement">
                     <div className=" border-2 border-pink rounded-[50%] w-3/4 p-3 ">
                         <img
                         src="/rp1.png"
@@ -35,7 +35,7 @@ const ourTeam = () => {
                     
                 </div>
 
-                <div className="relative flex flex-col items-center">
+                <div className="relative flex flex-col items-center contactusElement">
                     <div className=" border-2 border-pink rounded-[50%] w-3/4 p-3 ">
                         <img
                         src="/rp1.png"
