@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import useAnimation from '@/components/useAnimation'
 import TeamMember from "@/components/TeamMember"
 const ourTeam = () => {
-    useAnimation('contactusElement')
+    useAnimation()
   return (
     <>
       <Navbar />
