@@ -7,7 +7,7 @@ import gsap, { Power3 } from "gsap";
 import useAnimation from "@/components/useAnimation";
 const page = () => {
   
-  useAnimation('contactus')
+  useAnimation()
 
 
   const [formData, setFormData] = useState({
@@ -65,7 +65,7 @@ const page = () => {
   return (
     <>
       <Navbar />
-      <section id="contact" className="contactus">
+      <section id="contact" className="fadeup">
         <div className="xl:container mx-auto px-12 mt-10">
           <div className="text-center ">
             <h1 className='contactusElement text-3xl font-bold relative after:content-[""] after:absolute after:bg-pink after:h-0.5 after:-bottom-3 after:w-20 after:left-[38%] sm:after:left-[44%] md:after:left-[45%] lg:after:left-[46%] xl:after:left-[47.5%]'>
