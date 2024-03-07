@@ -1,8 +1,27 @@
 "use client"
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { ScrollTrigger } from 'gsap/all';
+import gsap, { Power3 } from "gsap";
 const page = () => {
+  
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const tl = gsap.timeline();
+
+    tl.fromTo(".contactusElement", { opacity: 0 }, { opacity: 1, duration: 0.9, y: -40, ease: Power3.easeOut })
+
+    ScrollTrigger.create({
+      trigger: ".contactusElement",
+      start: 'top center', 
+      onEnter: () => tl.play(),
+      onLeaveBack: () => tl.reverse(),
+      onEnterBack:() => tl.play()
+    });
+  }, []);
+
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -61,10 +80,10 @@ const page = () => {
       <section id="contact">
         <div className="xl:container mx-auto px-12 mt-10">
           <div className="text-center ">
-            <h1 className='text-3xl font-bold relative after:content-[""] after:absolute after:bg-pink after:h-0.5 after:-bottom-3 after:w-20 after:left-[38%] sm:after:left-[44%] md:after:left-[45%] lg:after:left-[46%] xl:after:left-[47.5%]'>
+            <h1 className='contactusElement text-3xl font-bold relative after:content-[""] after:absolute after:bg-pink after:h-0.5 after:-bottom-3 after:w-20 after:left-[38%] sm:after:left-[44%] md:after:left-[45%] lg:after:left-[46%] xl:after:left-[47.5%]'>
               Contact Us
             </h1>
-            <form onSubmit={handleSubmit} className={`${errors.name || errors.email || errors.message ? 'space-y-5':'space-y-10 '} mt-10`}>
+            <form onSubmit={handleSubmit} className={` ${errors.name || errors.email || errors.message ? 'space-y-5':'space-y-10 '} mt-10`}>
               <input
                 name="name"
                 placeholder="Name"

@@ -1,12 +1,15 @@
+"use client"
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "@/components/Footer";
+import useAnimation from '@/components/useAnimation'
 
 const ourTeam = () => {
+    useAnimation('contactusElement')
   return (
     <>
       <Navbar />
-      <section className="mb-32">
+      <section className="mb-32 contactusElement">
         <div className="xl:container mx-auto px-12 mt-10">
           <div className="grid grid-cols-1 gap-x-10 gap-y-32 lg:gap-y-40  sm:grid-cols-4">
                 <div className="relative flex flex-col items-center">
