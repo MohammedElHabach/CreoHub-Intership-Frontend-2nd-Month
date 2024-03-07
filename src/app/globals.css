@@ -137,7 +137,6 @@ body {
   height: 30px;
   background-color: white;
   position: fixed;
-  color: white;
   z-index: 9999;
   border-radius: 50%;
 }
