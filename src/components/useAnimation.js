@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/all';
 const useAnimation = (elementClass) => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger);
-        const tl = gsap.timeline();
+        const tl = gsap.timeline().paused(true);
     
         tl.fromTo(`.${elementClass}`, { opacity: 0 }, { opacity: 1, duration: 0.9, y: -40, ease: Power3.easeOut });
     
