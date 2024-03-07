@@ -26,7 +26,7 @@ const useAnimation = () => {
         });
 
         ScrollTrigger.create({
-            trigger: `.lineAnimation`,
+            trigger: `.memberAnimation`,
             start: 'top center',
             onEnter: () => tl2.play(),
             onLeaveBack: () => tl2.reverse(),
@@ -34,7 +34,7 @@ const useAnimation = () => {
           });
 
           ScrollTrigger.create({
-            trigger: `.ballAnimation`,
+            trigger: `.memberAnimation`,
             start: 'top center',
             onEnter: () => tl3.play(),
             onLeaveBack: () => tl3.reverse(),
