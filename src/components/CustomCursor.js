@@ -38,14 +38,14 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <>
+    <div className="flex  items-center justify-center">
       <div ref={cursorRef} className="cursor">
        
       </div>
       <div ref={followerRef} className="follower-cursor">
        
       </div>
-    </>
+    </div>
   );
 };
 
