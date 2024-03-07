@@ -38,7 +38,7 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <div className="flex  items-center justify-center">
+    <div className="flex w-1  items-center justify-center ">
       <div ref={cursorRef} className="cursor">
        
       </div>
