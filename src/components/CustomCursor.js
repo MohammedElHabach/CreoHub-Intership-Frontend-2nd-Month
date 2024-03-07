@@ -7,6 +7,12 @@ const CustomCursor = () => {
   const followerRef = useRef(null);
 
   const moveCursor = (e) => {
+    const elementsUnderCursor = document.elementsFromPoint(e.clientX, e.clientY);
+
+    const isTextHovered = elementsUnderCursor.some(
+      (element) => element.tagName === "SPAN" || element.tagName === "P" || element.tagName === "H1"|| element.tagName === "A" || element.tagName === "H2" || element.tagName === "H3"   || element.tagName === "H4"
+    );
+
     gsap.to(cursorRef.current,{
         x:e.clientX,
         y:e.clientY,
@@ -15,7 +21,10 @@ const CustomCursor = () => {
     gsap.to(followerRef.current,{
         x:e.clientX,
         y:e.clientY,
-        ease:Power3.easeOut
+        ease:Power3.easeOut,
+        mixBlendMode: isTextHovered ? "difference" : "normal", 
+
+
 
     })
 
