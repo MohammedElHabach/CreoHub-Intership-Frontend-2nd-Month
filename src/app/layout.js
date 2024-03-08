@@ -1,15 +1,15 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import axios from "@/utils/axios";
+import CustomCursor from "@/components/CustomCursor";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 const getMetaData = async () => {
-
   try {
     const response = await axios.get("/page/home", {
       headers: {
-        "Accept-Language": "en", 
+        "Accept-Language": "en",
       },
     });
     return response.data;
@@ -28,11 +28,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+        />
         <title>{data?.data.title}</title>
         <meta name="description" content={data?.data.seo_description} />
-
       </head>
-      <body className={inter.className}>{children}</body>
+      <body>
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

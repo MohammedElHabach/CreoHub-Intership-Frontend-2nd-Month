@@ -129,7 +129,7 @@ body {
   background-color: transparent;
   border: 2px solid grey;
   border-radius: 50%;
-  z-index: 9999;
+  z-index: 999;
 }
 
 .follower-cursor{
@@ -137,6 +137,6 @@ body {
   height: 30px;
   background-color: white;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   border-radius: 50%;
 }

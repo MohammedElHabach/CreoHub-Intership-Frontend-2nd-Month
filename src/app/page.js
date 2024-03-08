@@ -12,7 +12,6 @@ export default async function Home() {
   
     return (
     <>
-    <CustomCursor/>
       <Navbar />
       <HeroSection/>
       <DataSection data={data.props.data.data.sections}/>
