@@ -75,7 +75,7 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <div className="flex w-1 select-none mix-blend-difference  items-center justify-center ">
+    <div className="flex w-1 items-center justify-center ">
       <div ref={cursorRef} className="cursor">
        
       </div>

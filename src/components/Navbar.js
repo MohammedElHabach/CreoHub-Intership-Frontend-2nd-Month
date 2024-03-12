@@ -25,11 +25,11 @@ const Navbar = () => {
                 </div>  
 
                 <div className='hidden md:flex space-x-4'>
-                    <Link href="/about" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>about us</Link>
-                    <Link href="/ourwork" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
-                    <Link href="/ourclients" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
-                    <Link href="/ourteam" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our team</Link>
-                    <Link href="/contact" className='relative linkCursor hover:text-black after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
+                    <Link href="/about" className='relative linkCursor   after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>about us</Link>
+                    <Link href="/ourwork" className='relative linkCursor  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
+                    <Link href="/ourclients" className='relative linkCursor  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
+                    <Link href="/ourteam" className='relative linkCursor  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our team</Link>
+                    <Link href="/contact" className='relative linkCursor after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
                 </div>
 
                 <button onClick={handleOpenMenu} id="menu-btn" className="block hamburger  md:hidden focus:outline-none">

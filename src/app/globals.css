@@ -131,6 +131,7 @@ body {
   border-radius: 50%;
   z-index: 2;
   pointer-events: none;
+
 }
 
 .follower-cursor{
@@ -141,4 +142,6 @@ body {
   z-index: 2;
   border-radius: 50%;
   pointer-events: none;
+  mix-blend-mode: difference;
+
 }
