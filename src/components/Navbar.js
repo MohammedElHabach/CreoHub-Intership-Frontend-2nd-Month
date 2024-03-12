@@ -16,20 +16,20 @@ const Navbar = () => {
       }
   return (
     <nav>
-        <div className ={` xl:container ${isMenuOpen ? '' : 'border-pink border-b-2'}  md:border-none relative px-5 md:mx-auto md:px-12 py-5 `}>
+        <div className ={` xl:container ${isMenuOpen ? '' : 'border-pink border-b-2'} z-10  md:border-none relative px-5 md:mx-auto md:px-12 py-5 `}>
             <div className='flex justify-between items-center'>
                 <div>
                     <Link href="/">
-                        <img className='w-16 md:w-28' src="/logo.png" alt="logo" />
+                        <img className='w-16 z-10 md:w-28' src="/logo.png" alt="logo" />
                     </Link>
                 </div>  
 
                 <div className='hidden md:flex space-x-4'>
-                    <Link href="/about" className='relative  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>about us</Link>
-                    <Link href="/ourwork" className='relative  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
-                    <Link href="/ourclients" className='relative  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
-                    <Link href="/ourteam" className='relative  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our team</Link>
-                    <Link href="/contact" className='relative  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
+                    <Link href="/about" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>about us</Link>
+                    <Link href="/ourwork" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our work</Link>
+                    <Link href="/ourclients" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our clients</Link>
+                    <Link href="/ourteam" className='relative linkCursor hover:text-black  after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>our team</Link>
+                    <Link href="/contact" className='relative linkCursor hover:text-black after:content-[""] after:absolute after:bg-pink after:h-0.5 after:left-0 after:-bottom-2 after:w-0 after:transition-all after:duration-300 hover:after:w-full '>contact us</Link>
                 </div>
 
                 <button onClick={handleOpenMenu} id="menu-btn" className="block hamburger  md:hidden focus:outline-none">

@@ -2,7 +2,7 @@ import React from "react";
 
 const TeamMember = ({borderColor,bgColor}) => {
   return (
-    <div className="relative flex flex-col items-center memberAnimation ">
+    <div className="relative flex flex-col items-center memberAnimation">
       <div className={`border-2 ${borderColor} rounded-[50%] w-3/4 p-3 `}>
         <img src="/rp1.png" alt="image" className=" mx-auto rounded-full " />
       </div>

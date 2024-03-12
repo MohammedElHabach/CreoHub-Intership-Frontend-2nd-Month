@@ -6,6 +6,8 @@ const CustomCursor = () => {
   const cursorRef = useRef(null);
   const followerRef = useRef(null);
 
+  
+
   const moveCursor = (e) => {
 
     gsap.to(cursorRef.current,{
@@ -18,10 +20,9 @@ const CustomCursor = () => {
         x:e.clientX,
         y:e.clientY,
         ease:Power3.easeOut,
-        mixBlendMode:  "difference" ,
-
-
     })
+
+    
 
   }
 
@@ -37,14 +38,44 @@ const CustomCursor = () => {
       xPercent: -20,
       yPercent: -20,
       duration:.5,
-    
-
     });
+
+    const handleMouseEnter = () => {
+      gsap.to(followerRef.current, {
+        width: "50px", 
+        height: "50px", 
+        ease: Power3.easeOut,
+      });
+    };
+  
+    const handleMouseLeave = () => {
+      gsap.to(followerRef.current, {
+        width: "30px", 
+        height: "30px",
+        ease: Power3.easeOut,
+      });
+    };
+
     window.addEventListener("mousemove",moveCursor)
+
+    const linkElements = document.getElementsByClassName("linkCursor");
+    Array.from(linkElements).forEach(linkElement => {
+    linkElement.addEventListener("mouseenter", handleMouseEnter);
+    linkElement.addEventListener("mouseleave", handleMouseLeave);
+  });
+
+  return () => {
+    Array.from(linkElements).forEach(linkElement => {
+      linkElement.removeEventListener("mouseenter", handleMouseEnter);
+      linkElement.removeEventListener("mouseleave", handleMouseLeave);
+    });
+  };
+
+
   }, []);
 
   return (
-    <div className="flex w-1  items-center justify-center ">
+    <div className="flex w-1 select-none mix-blend-difference  items-center justify-center ">
       <div ref={cursorRef} className="cursor">
        
       </div>
