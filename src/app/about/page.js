@@ -1,7 +1,13 @@
+"use client";
 import Footer from "@/components/Footer";
 import Navbar from "../../components/Navbar";
+import AboutVideo from "@/components/AboutVideo";
 import AboutSection from "@/components/AboutSection";
+import AccordionCustomIcon from "@/components/Accordion";
+import { useParams } from "next/navigation";
 const about = () => {
+  
+
   return (
     <>
       <Navbar />
@@ -19,9 +25,11 @@ const about = () => {
         text={"We Foster \n Innovation , Unleash Your Legacy"}
         span={`\nFor Future Generations`}
         sectionId="secondSec"
-
       />
-      <Footer/>
+
+      <AboutVideo />
+
+      <Footer />
     </>
   );
 };
