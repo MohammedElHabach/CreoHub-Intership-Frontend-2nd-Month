@@ -18,6 +18,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Footer from "@/components/Footer";
 import OurClientImage from "../../components/OurClientImage";
+import DialogDefault from "@/components/Dialog"
 const ourClients = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const swiperRef = useRef(null);
@@ -111,6 +112,9 @@ const ourClients = () => {
             </div>
           </div>
           <OurClientImage/>
+          <div className="mt-16">
+              <DialogDefault/>
+          </div>
         </div>
       </section>
       <Footer />
