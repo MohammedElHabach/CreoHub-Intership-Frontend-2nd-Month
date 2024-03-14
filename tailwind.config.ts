@@ -10,7 +10,8 @@ const config: Config = withMT({
   theme: {
     extend: {
       colors: {
-        pink:"#fe424c"
+        pink:"#fe424c",
+        darkGray:"rgb(30 41 59)"
       },
     },
   },

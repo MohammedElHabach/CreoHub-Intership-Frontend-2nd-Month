@@ -77,7 +77,7 @@ const page = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="p-3 mx-auto block bg-slate-800 rounded-md outline-none"
+                className="p-3 mx-auto block bg-darkGray rounded-md outline-none"
                 type="text"
               />
               {errors.name && <p className="text-red-500">{errors.name}</p>}
@@ -88,7 +88,7 @@ const page = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 type="email"
-                className="p-3  mx-auto block bg-slate-800 rounded-md outline-none"
+                className="p-3  mx-auto block bg-darkGray rounded-md outline-none"
               />
               {errors.email && <p className="text-red-500">{errors.email}</p>}
 
@@ -98,7 +98,7 @@ const page = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 cols="23"
-                className="p-3 mx-auto block bg-slate-800 rounded-md outline-none"
+                className="p-3 mx-auto block bg-darkGray rounded-md outline-none"
                 rows="4"
               ></textarea>
               {errors.message && (
