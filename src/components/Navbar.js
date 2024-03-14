@@ -40,7 +40,7 @@ const Navbar = () => {
             </div>
 
             <div className="md:hidden">
-                <div id="menu" className="hidden absolute w-full left-0 bg-black  flex-col items-center pb-48 space-y-10 pt-4 font-bold   ">
+                <div id="menu" className="hidden z-10 absolute w-full left-0 bg-black  flex-col items-center pb-48 space-y-10 pt-4 font-bold   ">
                     <Link onClick={handleOpenMenu}  href="/about">about us</Link>
                     <Link onClick={handleOpenMenu}   href="/ourwork">our work</Link>
                     <Link onClick={handleOpenMenu}  href="/ourclients">our clients</Link>

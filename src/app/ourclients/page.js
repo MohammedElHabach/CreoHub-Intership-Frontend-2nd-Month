@@ -92,7 +92,7 @@ const ourClients = () => {
               </div>
             </div>
 
-            <div className="bg-slate-800 mt-10 p-10 ourclient">
+            <div className=" bg-slate-800 mt-10 p-10 ourclient">
               <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={40}
